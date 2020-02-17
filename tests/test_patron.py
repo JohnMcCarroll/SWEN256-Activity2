@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append('../')
 from library.patron import Patron
 from library.patron import InvalidNameException
 

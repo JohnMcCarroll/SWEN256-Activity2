@@ -7,18 +7,14 @@ from library.patron import InvalidNameException
 
 class TestPatron(unittest.TestCase):
 
-#    def SetUp(self):
-#        # InvalidNameException = unittest.Mock()
-#        self.patron1 = Patron("first", "last", 23, "98765432")
-
     def test_constructor(self):
-        patron = Patron("mister", "twister", 49, "yert4321")
+        Patron("mister", "twister", 49, "yert4321")
         # constructor executed without error
         self.assertTrue(True)
 
-    def test_constructor_numberName(self):              # MOCK EXCEPTION CLASS?
+    def test_constructor_numberName(self):
         try:
-            patron = Patron("yupp", "5678", 49, "yert4321")
+            Patron("yupp", "5678", 49, "yert4321")
         except InvalidNameException:
             self.assertTrue(True)
             return
